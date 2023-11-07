@@ -10,11 +10,11 @@ jobs:
         run: echo '${{ toJSON(github.event) }}' | jq
         shell: bash
       - name:  Create Comment
-        uses:  GITTeammember1/create-or-update-comment@v1
+        uses:  ghActionDemo/create-or-update-comment@v1
         with:
           issue-number: ${{github.event.issue.number}}
           body:  |
             This is multi-line comment
             -  Created by [create-or-update-comment] [1]
 
-            [1]:  https://github.com/GITTeammember1/create-or-update-comment reactions: '+1'
+            [1]:  https://github.com/GITTeammember1/ghActionDemo/create-or-update-comment reactions: '+1'
